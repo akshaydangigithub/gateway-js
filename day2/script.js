@@ -73,40 +73,39 @@
 //   console.log("Wrong Input");
 // }
 
+// let day = prompt("Enter Day Name")
 
-let day = prompt("Enter Day Name")
+// switch (day) {
+//   case "monday":
+//     console.log("1");
+//     break;
 
-switch (day) {
-  case "monday":
-    console.log("1");
-    break;
+//   case 2:
+//     console.log("Monday");
+//     break;
 
-  case 2:
-    console.log("Monday");
-    break;
+//   case 3:
+//     console.log("Tuesday");
+//     break;
 
-  case 3:
-    console.log("Tuesday");
-    break;
+//   case 4:
+//     console.log("Wednesday");
+//     break;
 
-  case 4:
-    console.log("Wednesday");
-    break;
+//   case 5:
+//     console.log("Thursday");
+//     break;
 
-  case 5:
-    console.log("Thursday");
-    break;
+//   case 6:
+//     console.log("Friday");
+//     break;
 
-  case 6:
-    console.log("Friday");
-    break;
+//   case 7:
+//     console.log("Saturday");
+//     break;
 
-  case 7:
-    console.log("Saturday");
-    break;
+//   default:
+//     console.log("Wrong Input");
 
-  default:
-    console.log("Wrong Input");
-
-    break;
-}
+//     break;
+// }
