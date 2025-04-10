@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="flex items-center h-[100vh] justify-center">
+
+    <main class="w-[40rem] bg-blue-100 flex  justify-center flex-col p-5 rounded-xl shadow-md shadow-blue-300">
+        <h1 class="text-2xl font-bold mb-4 text-center">Temprature Convertor</h1>
+
+        <label class="mb-2 text-start" for="">Enter Temprature</label>
+        <input id="input_value" class="bg-white w-full p-2.5 rounded-xl shadow-md mb-3" type="number" placeholder="Enter Temp">
+        <label class="mb-2 text-start" for="">From Unit</label>
+        <select id="fromUnit" name="" id="" class="bg-white w-full p-2.5 rounded-xl shadow-md mb-3">
+            <option value="c">Celsius</option>
+            <option value="k">Kelvin</option>
+            <option value="f">Fahrenheit</option>
+        </select>
+
+        <label class="mb-2 text-start" for="">To Unit</label>
+        <select id="toUnit" name="" id="" class="bg-white w-full p-2.5 rounded-xl shadow-md mb-3">
+            <option value="c">Celsius</option>
+            <option value="k">Kelvin</option>
+            <option value="f">Fahrenheit</option>
+        </select>
+
+        <button class="bg-blue-400 text-white p-2.5 rounded-xl mb-5 cursor-pointer">
+            Convert
+        </button>
+
+        <div>
+            <h1 class="text-center">
+                Result: <span class="font-bold bg-blue-400 text-white px-2 py-1 rounded-xl ml-1" id="result">234.677 K</span>
+            </h1>
+        </div>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
