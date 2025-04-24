@@ -14,6 +14,9 @@
     * {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
+    body{
+        overflow-x: hidden;
+    }
 </style>
 
 <body>
@@ -31,7 +34,7 @@
                 <i class="ri-search-line text-lg cursor-pointer"></i>
                 <i class="ri-user-line text-lg cursor-pointer"></i>
                 <i class="ri-heart-line text-lg cursor-pointer"></i>
-                <i class="ri-shopping-bag-line text-lg cursor-pointer"></i>
+                <i class="ri-shopping-bag-line text-lg cursor-pointer cart"></i>
             </div>
         </nav>
 
@@ -69,8 +72,7 @@
                         </div>
                         <div class="flex items-end">
                             <img class="object-cover mt-28 h-[90%] w-[90%]"
-                                src="https://flone.jamstacktemplates.dev/assets/img/slider/single-slide-1.png"
-                                alt="">
+                                src="https://flone.jamstacktemplates.dev/assets/img/slider/single-slide-1.png" alt="">
                         </div>
 
                     </div>
@@ -81,8 +83,225 @@
             <div class="swiper-button-prev"></div>
         </div>
 
-        <div class="w-full h-96 bg-red-300"></div>
+        <div class="w-full grid grid-cols-4 gap-4 pt-20 pb-20 px-8">
+            <div class="flex gap-6 items-center">
+                <img class="w-14 object-cover"
+                    src="https://flone.jamstacktemplates.dev/assets/img/icon-img/support-1.png" alt="">
+                <div>
+                    <h1 class="font-semibold text-lg">Free Shipping</h1>
+                    <p class="text-sm text-gray-700">Free shipping on all order</p>
+                </div>
+            </div>
+            <div class="flex gap-6 items-center">
+                <img class="w-14 object-cover"
+                    src="https://flone.jamstacktemplates.dev/assets/img/icon-img/support-2.png" alt="">
+                <div>
+                    <h1 class="font-semibold text-lg">Support 24/7</h1>
+                    <p class="text-sm text-gray-700">Free shipping on all order</p>
+                </div>
+            </div>
+            <div class="flex gap-6 items-center">
+                <img class="w-14 object-cover"
+                    src="https://flone.jamstacktemplates.dev/assets/img/icon-img/support-3.png" alt="">
+                <div>
+                    <h1 class="font-semibold text-lg">Money Return</h1>
+                    <p class="text-sm text-gray-700">Free shipping on all order</p>
+                </div>
+            </div>
+            <div class="flex gap-6 items-center">
+                <img class="w-14 object-cover"
+                    src="https://flone.jamstacktemplates.dev/assets/img/icon-img/support-4.png" alt="">
+                <div>
+                    <h1 class="font-semibold text-lg">
+                        Order Discount</h1>
+                    <p class="text-sm text-gray-700">Free shipping on all order</p>
+                </div>
+            </div>
+        </div>
 
+        <!-- products -->
+        <div class="px-8">
+            <h1 class="font-bold text-2xl text-center">All Product</h1>
+            <div class="grid grid-cols-4 gap-4 mt-10">
+                <div class="border p-2 rounded-lg relative">
+                    <h1 class="bg-[#A749FF] text-white w-fit px-2 text-sm rounded-lg absolute top-4 right-4">New</h1>
+                    <img class="h-64 w-full rounded-lg object-conver"
+                        src="https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg" alt="">
+                    <h1 class="text-lg font-semibold mt-3">Product name</h1>
+                    <h2 class="text-xl font-bold mt-1">₹ 487458</h2>
+                </div>
+                <div class="border p-2 rounded-lg relative">
+                    <h1 class="bg-[#A749FF] text-white w-fit px-2 text-sm rounded-lg absolute top-4 right-4">New</h1>
+                    <img class="h-64 w-full rounded-lg object-conver"
+                        src="https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg" alt="">
+                    <h1 class="text-lg font-semibold mt-3">Product name</h1>
+                    <h2 class="text-xl font-bold mt-1">₹ 487458</h2>
+                </div>
+                <div class="border p-2 rounded-lg relative">
+                    <h1 class="bg-[#A749FF] text-white w-fit px-2 text-sm rounded-lg absolute top-4 right-4">New</h1>
+                    <img class="h-64 w-full rounded-lg object-conver"
+                        src="https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg" alt="">
+                    <h1 class="text-lg font-semibold mt-3">Product name</h1>
+                    <h2 class="text-xl font-bold mt-1">₹ 487458</h2>
+                </div>
+                <div class="border p-2 rounded-lg relative">
+                    <h1 class="bg-[#A749FF] text-white w-fit px-2 text-sm rounded-lg absolute top-4 right-4">New</h1>
+                    <img class="h-64 w-full rounded-lg object-conver"
+                        src="https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg" alt="">
+                    <h1 class="text-lg font-semibold mt-3">Product name</h1>
+                    <h2 class="text-xl font-bold mt-1">₹ 487458</h2>
+                </div>
+                <div class="border p-2 rounded-lg relative">
+                    <h1 class="bg-[#A749FF] text-white w-fit px-2 text-sm rounded-lg absolute top-4 right-4">New</h1>
+                    <img class="h-64 w-full rounded-lg object-conver"
+                        src="https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg" alt="">
+                    <h1 class="text-lg font-semibold mt-3">Product name</h1>
+                    <h2 class="text-xl font-bold mt-1">₹ 487458</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- blogs -->
+
+        <div class="mt-10 px-8  pb-20">
+            <div class="h-12 w-full flex items-center justify-center">
+                <div class="h-[2px] w-20 bg-black"></div>
+                <h1 class="font-bold text-xl px-4">OUR BLOG</h1>
+                <div class="h-[2px] w-20 bg-black"></div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-6 mt-10">
+                <div class="w-full group relative">
+                    <div class="flex items-center gap-4 absolute top-4 left-4 z-10">
+                        <h1 class="bg-[#A749FF] text-white w-fit px-2 text-sm  ">lifestyle</h1>
+                        <h1 class="bg-[#A749FF] text-white w-fit px-2 text-sm  ">Men</h1>
+                    </div>
+                    <div class="h-64 w-full overflow-hidden">
+                        <img class="h-full w-full object-cover group-hover:scale-115 duration-400"
+                            src="https://flone.jamstacktemplates.dev/assets/img/blog/blog-1.jpg" alt="">
+                    </div>
+                    <div class="bg-white h-fit w-fit px-14 py-4 block m-auto -mt-20 relative">
+                        <h1 class="font-medium text-center text-2xl hover:text-[#a749ff] duration-100 cursor-pointer">A
+                            guide to latest <br> trends</h1>
+                        <p class="text-center text-gray-700 mt-2">By Admin</p>
+                    </div>
+                </div>
+                <div class="w-full group relative">
+                    <div class="flex items-center gap-4 absolute top-4 left-4 z-10">
+                        <h1 class="bg-[#A749FF] text-white w-fit px-2 text-sm  ">lifestyle</h1>
+                        <h1 class="bg-[#A749FF] text-white w-fit px-2 text-sm  ">Men</h1>
+                    </div>
+                    <div class="h-64 w-full overflow-hidden">
+                        <img class="h-full w-full object-cover group-hover:scale-115 duration-400"
+                            src="https://flone.jamstacktemplates.dev/assets/img/blog/blog-2.jpg" alt="">
+                    </div>
+                    <div class="bg-white h-fit w-fit px-14 py-4 block m-auto -mt-20 relative">
+                        <h1 class="font-medium text-center text-2xl hover:text-[#a749ff] duration-100 cursor-pointer">A
+                            guide to latest <br> trends</h1>
+                        <p class="text-center text-gray-700 mt-2">By Admin</p>
+                    </div>
+                </div>
+                <div class="w-full group relative">
+                    <div class="flex items-center gap-4 absolute top-4 left-4 z-10">
+                        <h1 class="bg-[#A749FF] text-white w-fit px-2 text-sm  ">lifestyle</h1>
+                        <h1 class="bg-[#A749FF] text-white w-fit px-2 text-sm  ">Men</h1>
+                    </div>
+                    <div class="h-64 w-full overflow-hidden">
+                        <img class="h-full w-full object-cover group-hover:scale-115 duration-400"
+                            src="https://flone.jamstacktemplates.dev/assets/img/blog/blog-3.jpg" alt="">
+                    </div>
+                    <div class="bg-white h-fit w-fit px-14 py-4 block m-auto -mt-20 relative">
+                        <h1 class="font-medium text-center text-2xl hover:text-[#a749ff] duration-100 cursor-pointer">A
+                            guide to latest <br> trends</h1>
+                        <p class="text-center text-gray-700 mt-2">By Admin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+
+        <div class="py-20 w-full mt-10 px-8 bg-[#F6F6F8]">
+            <div class="grid grid-cols-5 gap-4 h-full w-full">
+                <div class="flex h-full w-full flex-col justify-center">
+                    <img class="w-[50%]" src="https://flone.jamstacktemplates.dev/assets/img/logo/logo.png" alt="">
+                    <p class="mt-2">© 2025 Flone.
+                        All Rights Reserved</p>
+                </div>
+                <div class="">
+                    <h1 class="font-semibold">ABOUT US</h1>
+                    <p class="mt-3 text-lg text-gray-700 cursor-pointer hover:text-[#a749ff]">About us</p>
+                    <p class="mt-1 text-lg text-gray-700 cursor-pointer hover:text-[#a749ff]">Store location</p>
+                    <p class="mt-1 text-lg text-gray-700 cursor-pointer hover:text-[#a749ff]">Contact</p>
+                    <p class="mt-1 text-lg text-gray-700 cursor-pointer hover:text-[#a749ff]">Orders tracking</p>
+                </div>
+                <div class="">
+                    <h1 class="font-semibold">USEFUL LINKS</h1>
+                    <p class="mt-3 text-lg text-gray-700 cursor-pointer hover:text-[#a749ff]">About us</p>
+                    <p class="mt-1 text-lg text-gray-700 cursor-pointer hover:text-[#a749ff]">Store location</p>
+                    <p class="mt-1 text-lg text-gray-700 cursor-pointer hover:text-[#a749ff]">Contact</p>
+                    <p class="mt-1 text-lg text-gray-700 cursor-pointer hover:text-[#a749ff]">Orders tracking</p>
+                </div>
+                <div class="">
+                    <h1 class="font-semibold">FOLLOW US</h1>
+                    <p class="mt-3 text-lg text-gray-700 cursor-pointer hover:text-[#a749ff]">About us</p>
+                    <p class="mt-1 text-lg text-gray-700 cursor-pointer hover:text-[#a749ff]">Store location</p>
+                    <p class="mt-1 text-lg text-gray-700 cursor-pointer hover:text-[#a749ff]">Contact</p>
+                    <p class="mt-1 text-lg text-gray-700 cursor-pointer hover:text-[#a749ff]">Orders tracking</p>
+                </div>
+                <div class="">
+                    <h1 class="font-semibold">SUBSCRIBE</h1>
+                    <p class="mt-3 text-sm text-gray-700">Get E-mail updates about our latest shop and special offers.
+                    </p>
+                    <input type="email" placeholder="Enter your email address"
+                        class="mt-3 outline-none border-b border-gray-600 py-4">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- sidebar -->
+
+        <div class="h-screen sidebar z-30 transition-all duration-300 w-96 bg-white shadow-xl absolute top-0 right-0 translate-x-full">
+            <div class="bg-gray-100 p-5 w-full flex items-center justify-between">
+                <span>Shopping Cart</span>
+                <div class="h-8 w-8 close cursor-pointer flex items-center justify-center rounded-full bg-black">
+                    <span class="text-white">X</span>
+                </div>
+            </div>
+
+            <div class="flex relative items-center gap-10 mt-5 px-5">
+                <img height="70" width="70" src="https://flone.jamstacktemplates.dev/assets/img/product/fashion/6.jpg"
+                    alt="" />
+                <div>
+                    <h1 class="font-semibold hover:text-red-600 transition-all duration-200 cursor-pointer">
+                        sdfdsfd
+                    </h1>
+                    <p>4 x 45656</p>
+                </div>
+
+                <span class="absolute top-0 right-8 cursor-pointer">
+                    <IoIosClose class="text-2xl" />
+                </span>
+            </div>
+            <div class="flex relative items-center gap-10 mt-5 px-5">
+                <img height="70" width="70" src="https://flone.jamstacktemplates.dev/assets/img/product/fashion/6.jpg"
+                    alt="" />
+                <div>
+                    <h1 class="font-semibold hover:text-red-600 transition-all duration-200 cursor-pointer">
+                        sdfdsfd
+                    </h1>
+                    <p>4 x 45656</p>
+                </div>
+
+                <span class="absolute top-0 right-8 cursor-pointer">
+                    <IoIosClose class="text-2xl" />
+                </span>
+            </div>
+
+
+
+        </div>
 
 
     </main>
