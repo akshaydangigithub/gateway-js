@@ -21,50 +21,80 @@ function sidebar() {
 
 let cate_main = document.querySelector(".cate_main");
 let pro_main = document.querySelector(".pro_main");
+let loader = document.querySelector(".loader");
 
 var activeCategory = "electronics";
 
+var loading = true;
+
 async function getCategories() {
   try {
+    loading = true;
+    loader.classList.remove("hidden");
     let res = await fetch("https://fakestoreapi.com/products/categories");
 
     let data = await res.json();
 
     data.forEach(function (category) {
-      cate_main.innerHTML += `<div class="border py-1 cursor-pointer px-6 ${
-        category === activeCategory && "bg-red-100"
-      } ">${category}</div>`;
+      cate_main.innerHTML += `<button onclick="getActiveCategory('${
+        category === "men's clothing"
+          ? "mens clothing"
+          : category === "women's clothing"
+          ? "womens clothing"
+          : category
+      }')" class="px-2.5 py-1 cursor-pointer
+ rounded-xl border activecatebtns hover:bg-red-400 hover:text-white">${category}</button>`;
     });
   } catch (error) {
     console.log(error);
+  } finally {
+    loading = false;
+    loader.classList.add("hidden");
   }
 }
 
-async function getAllProducts() {
+async function getAllProducts(cat) {
   try {
-    let res = await fetch("https://fakestoreapi.com/products");
+    loading = true;
+    loader.classList.remove("hidden");
+    let res = await fetch(`https://fakestoreapi.com/products/category/${cat}`);
 
     let data = await res.json();
 
     console.log(data);
 
     data.forEach(function (pro) {
-      pro_main.innerHTML +=  `<div class="border p-2 rounded-lg relative">
+      pro_main.innerHTML += `<div class="border p-2 rounded-lg relative">
       <h1 class="bg-[#A749FF] text-white w-fit px-2 text-sm rounded-lg absolute top-4 right-4">New</h1>
       <img class="h-64 w-full rounded-lg object-conver"
           src=${pro.image}
           alt="">
       <h1 class="text-lg font-semibold mt-3">${pro.title}</h1>
       <h2 class="text-xl font-bold mt-1">₹ ${pro.price}</h2>
-  </div>`
+  </div>`;
     });
   } catch (error) {
     console.log(error);
+  } finally {
+    loading = false;
+    loader.classList.add("hidden");
   }
 }
 
-
-
 sidebar();
 getCategories();
-getAllProducts();
+
+function getActiveCategory(cat) {
+  pro_main.innerHTML = "";
+  let d =
+    cat === "mens clothing"
+      ? "men's clothing"
+      : cat === "womens clothing"
+      ? "women's clothing"
+      : cat;
+
+  activeCategory = d;
+  getAllProducts(d);
+}
+
+getAllProducts("electronics");
